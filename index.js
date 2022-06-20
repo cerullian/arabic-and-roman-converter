@@ -5,14 +5,14 @@ const romanconvert = document.querySelector("#romanconvert");
 const romantonum = document.querySelector("#romantonum");
 const numberconvert = document.querySelector("#numberconvert");
 
-numtoroman.addEventListener("change", e => {
+numtoroman.addEventListener("keyup", e => {
     // console.log(typeof parseInt(e.target.value));
     const torom = romanize(parseInt(e.target.value));
     // console.log(torom);
     romanconvert.innerHTML = `Roman: ${torom}`;
 })
 
-romantonum.addEventListener("change", e => {
+romantonum.addEventListener("keyup", e => {
     const tonum = deromanize(e.target.value.toUpperCase());
     numberconvert.innerHTML = `Arabic: ${tonum}`;
 })
